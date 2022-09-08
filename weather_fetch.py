@@ -1,7 +1,8 @@
 from urllib import response
 import requests
 
-API_KEY     = '28c88a4a0b65728feaa241357c163062'
+
+API_KEY     ='28c88a4a0b65728feaa241357c163062'
 CITY        = input('Enter city? ')
 BASE_URL    = 'https://api.openweathermap.org/data/2.5/weather'
 
@@ -13,7 +14,7 @@ response    = requests.get(request_url)
 if response.status_code == 200:
     data = response.json()
     print(data)
-    weather = data['weather']["description"]
+    weather = data["weather"]
     print(weather)
 else:
     print("An error occured while processing")
